@@ -1,7 +1,7 @@
 'use strict';
 
 const number = document.querySelector('.number');
-
+const guess = document.querySelector('.guess');
 const checkBtn = document.querySelector('.check');
 const againBtn = document.querySelector('.again');
 const scoreLabel = document.querySelector('.score');
@@ -9,8 +9,6 @@ const scoreLabel = document.querySelector('.score');
 const highscore = document.querySelector('.highscore');
 const message = document.querySelector('.message');
 const body = document.querySelector('body');
-
-console.log(number, message, checkBtn, highscore);
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
@@ -31,6 +29,7 @@ checkBtn.addEventListener('click', function (e) {
     body.style.backgroundColor = '#60b347';
     number.style.width = '30rem';
     checkBtn.style.pointerEvents = 'none';
+
     if (score > highscore.textContent) {
       highscore.textContent = score;
     }
@@ -57,4 +56,6 @@ againBtn.addEventListener('click', function () {
   message.textContent = 'Start guessing...';
   body.style.backgroundColor = '#222';
   number.style.width = '15rem';
+  checkBtn.style.pointerEvents = 'auto';
+  guess.value = '';
 });
