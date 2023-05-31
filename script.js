@@ -30,6 +30,7 @@ checkBtn.addEventListener('click', function (e) {
     number.textContent = secretNumber;
     body.style.backgroundColor = '#60b347';
     number.style.width = '30rem';
+    checkBtn.style.pointerEvents = 'none';
     if (score > highscore.textContent) {
       highscore.textContent = score;
     }
