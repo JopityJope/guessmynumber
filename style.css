@@ -11,6 +11,18 @@ html {
   box-sizing: border-box;
 }
 
+@media (max-width: 56.25em) {
+  html {
+    font-size: 56.5%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  html {
+    font-size: 35%;
+  }
+}
+
 body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
